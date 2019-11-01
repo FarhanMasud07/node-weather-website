@@ -7,6 +7,8 @@ const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
 
 const app = express()
+const port = process.env.PORT || 3000
+
 const hbs = require('hbs')
 
 // console.log(__dirname)
@@ -15,7 +17,7 @@ const hbs = require('hbs')
 ///// define paths for express config ////////
 
 
- const publicDirectory = path.join(__dirname,'../public')
+const publicDirectory = path.join(__dirname, '../public')
 const viewDirectory = path.join(__dirname, '../templates/views')
 const layoutPath = path.join(__dirname, '../templates/layout')
 
@@ -50,7 +52,7 @@ const layoutPath = path.join(__dirname, '../templates/layout')
 
 
 ///// setup static directory to server ///
- app.use(express.static(publicDirectory))
+app.use(express.static(publicDirectory))
 
 /////// set up handlebar engine and view ////////
 
@@ -140,6 +142,6 @@ app.get('*', (req, res) => {
 // })
 
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
