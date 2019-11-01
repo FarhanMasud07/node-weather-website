@@ -7,6 +7,7 @@
   <title>Home</title>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
@@ -16,11 +17,12 @@
   {{>index}}
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1>PRD High School</h1>
-      <p>"--Child Friendly School."</p>
-      <form>
-        <input placeholder="Location">
-        <button>Search</button>
+      <h1>Weather</h1>
+      <p>Search by your current location</p>
+      <form class="form-inline mr-auto">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-mdb-color btn-rounded btn-sm my-0 ml-sm-2">Search</button>
+
       </form>
 
       <p id="msg-1"></p>
